@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Restaurant Details</h1>
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p>Category : <%= @restaurant.category.capitalize %></p>
+  <%= link_to restaurants_path, class: "btn btn-secondary text-white" do %>
+    <i class="fa fa-backward" aria-hidden="true"></i>
+    Back
+  <% end %>
+  <%= link_to new_restaurant_review_path(@restaurant), class: "btn btn-dark text-white" do %>
+    <i class="fas fa-comment"></i>
+    Add new review
+  <% end %>
+  <div class="cards">
+    <% @reviews.each do |review| %>
+      <div class="card-product m-3">
+        <%= image_tag "https://picsum.photos/seed/#{rand(0..100)}/120" %>
+        <div class="card-product-infos">
+          <h2><%= review.rating %> / 5</h2>
+          <p><%= "#{review.content[0,150]}..." %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

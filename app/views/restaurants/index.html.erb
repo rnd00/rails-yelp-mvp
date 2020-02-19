@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="text-center">List of all restaurants</h1>
+  <div class="d-flex justify-content-center">
+    <%= link_to new_restaurant_path, class: "btn btn-primary text-white" do %>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      Add a new restaurant
+    <% end %>
+  </div>
+  <div class="cards">
+    <% @restaurants.each do |restaurant| %>
+      <div class="card-product my-3">
+        <%= image_tag "https://picsum.photos/seed/#{rand(0..100)}/120", alt: restaurant.name %>
+        <div class="card-product-infos">
+          <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+          <p><%= restaurant.address %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
