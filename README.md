@@ -1,24 +1,11 @@
-# README
+# rails-yelp-mvp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+an exercise project made to run on rails
 
-Things you may want to cover:
+## to run
 
-* Ruby version
+`rails s`
 
-* System dependencies
+## note
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+it's prone to break so be careful
