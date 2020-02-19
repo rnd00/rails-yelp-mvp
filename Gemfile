@@ -39,10 +39,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Manually added
-gem 'rspec-rails', group: [:test]
-gem 'rails-controller-testing', group: [:test]
 gem 'autoprefixer-rails'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem 'rails-controller-testing', group: [:test]
+gem 'rspec-rails', group: [:test]
 gem 'simple_form'
 
 group :development, :test do
